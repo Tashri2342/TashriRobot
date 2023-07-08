@@ -101,7 +101,7 @@ buttons = [
         ),
     ],
     [   
-        InlineKeyboardButton(text="🍷𝐌𝐔𝐒𝐈𝐂🍷", callback_data="Music_Super"),
+        InlineKeyboardButton(text="🍷𝐌𝐔𝐒𝐈𝐂🍷", callback_data="Music_"),
     ],
     [
         InlineKeyboardButton(text="♥️ѕυρєя ¢σммαη∂ѕ♥️", callback_data="help_back"),
@@ -444,7 +444,7 @@ def Tashri_about_callback(update: Update, context: CallbackContext):
 @run_async
 def Music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "Music_Super":
+    if query.data == "Music_":
         query.message.edit_text(
             text=f"""
  **👀𝐇𝐞𝐲 𝐁𝐚𝐛𝐲 🖤\n\n🌺𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 {dispatcher.bot.first_name} 🍷\n\n🌹𝐈 𝐀𝐦 𝐀𝐧 📀 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 🎭 𝐀𝐧𝐝 🌱 𝐒𝐮𝐩𝐞𝐫𝐟𝐚𝐬𝐭 🌼 𝐕𝐂 🍄 𝐏𝐥𝐚𝐲𝐞𝐫 📣 𝐖𝐢𝐭𝐡 🕙 24𝐱7 🌀 𝐀𝐜𝐭𝐢𝐯𝐞 » 𝐅𝐨𝐫 🗨️ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 ♨️ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎸 𝐀𝐧𝐝 🏓 𝐆𝐫𝐨𝐮𝐩𝐬 🎻\n\n💐𝐅𝐞𝐞𝐥 😍 𝐋𝐚𝐠 📍 𝐅𝐫𝐞𝐞 😇 𝐓𝐨 🕊️ 𝐀𝐝𝐝 𝐌𝐞 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 🤖 𝐀𝐧𝐝 🩸 𝐄𝐧𝐣𝐨𝐲 ❥︎ 𝐒𝐮𝐩𝐞𝐫 💥 𝐇𝐢𝐠𝐡 💫 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 🦞 𝐀𝐮𝐝𝐢𝐨 🎧 𝐀𝐧𝐝 🔊 𝐕𝐢𝐝𝐞𝐨 🌷\n\n☆............𝙱𝚈 » [Legend](https://t.me/Tashri2342)............☆ 💞*
@@ -545,7 +545,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -570,7 +570,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -604,7 +604,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -633,7 +633,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -656,7 +656,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -686,7 +686,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -709,7 +709,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -730,7 +730,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -757,7 +757,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -793,7 +793,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -819,7 +819,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_Super"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Music_"),
                     ]
                 ]
             ),
@@ -1153,7 +1153,7 @@ def main():
         Tashri_about_callback, pattern=r"Tashri_"
     )
     Music_callback_handler = CallbackQueryHandler(
-        Music_about_callback, pattern=r"Music_Super"
+        Music_about_callback, pattern=r"Music_"
     )
 
     donate_handler = CommandHandler("donate", donate)
