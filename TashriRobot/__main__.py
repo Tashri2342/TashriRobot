@@ -101,7 +101,7 @@ buttons = [
         ),
     ],
     [   
-        InlineKeyboardButton(text="🍷️Super Music🍷", callback_data="Music_Super"),
+        InlineKeyboardButton(text="🍷𝐌𝐔𝐒𝐈𝐂🍷", callback_data="Music_Super"),
     ],
     [
         InlineKeyboardButton(text="♥️ѕυρєя ¢σммαη∂ѕ♥️", callback_data="help_back"),
