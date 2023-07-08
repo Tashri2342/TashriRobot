@@ -56,3 +56,4 @@ openai
 pyshorteners
 faker
 pyfiglet
+FFmpeg
