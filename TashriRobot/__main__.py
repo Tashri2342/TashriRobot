@@ -77,7 +77,7 @@ PM_START_TEX = """
 
 PM_START_TEXT = """ 
 
-*ʜᴇʏ* {} , [.](https://te.legra.ph/file/1347e7db63c0ace2611e6.jpg)
+*ʜᴇʏ* {} , [.]((https://te.legra.ph/file/1347e7db63c0ace2611e6.jpg))
 ╔ ❰★@Tashri2342★❱
 ║
 ┣⪼ {} 
