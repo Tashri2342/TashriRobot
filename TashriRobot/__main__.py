@@ -424,7 +424,7 @@ def Tashri_about_callback(update: Update, context: CallbackContext):
                         InlineKeyboardButton(
                             text="💗ᴜᴩᴅᴀᴛᴇs💓", url=f"https://t.me/Tashribots2342"
                         ),
-                    ]
+                    ],
                     [
                         InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Tashri_back"),
                     ],
