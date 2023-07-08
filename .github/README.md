@@ -18,7 +18,7 @@
 </h2>
 
 <p align="center">
-  <img src="https://graph.org/file/d874fc40ddf9ead0cad6b.jpg">
+  <img src="https://te.legra.ph/file/48e7bc019fa24d81925d2.jpg">
 </p>
 
 ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [𝄟ॐ❥Tashri🍷Robot𝄟⃟🥀](https://t.me/Tashri2342)
