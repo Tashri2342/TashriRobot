@@ -1,6 +1,7 @@
 import html
 import json
 import re
+from typing import Optional
 from time import sleep
 
 import requests
@@ -19,7 +20,6 @@ from telegram.ext import (
     CommandHandler,
     Filters,
     MessageHandler,
-              
 )
 from telegram.utils.helpers import mention_html
 
@@ -29,7 +29,6 @@ from TashriRobot.modules.helper_funcs.chat_status import user_admin, user_admin_
 from TashriRobot.modules.log_channel import gloggable
 
 
-          
 @user_admin_no_reply
 @gloggable
 def fallenrm(update: Update, context: CallbackContext) -> str:
@@ -49,7 +48,7 @@ def fallenrm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "{} ᴄʜᴀᴛʙᴏᴛ ᴅɪsᴀʙʟᴇᴅ ʙʏ {}.".format(
+                "{} chatbot disabled by {}.".format(
                     dispatcher.bot.first_name, mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -58,7 +57,6 @@ def fallenrm(update: Update, context: CallbackContext) -> str:
     return ""
 
 
-          
 @user_admin_no_reply
 @gloggable
 def fallenadd(update: Update, context: CallbackContext) -> str:
@@ -73,12 +71,12 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
             is_fallen = sql.rem_fallen(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
-                f"AI_ENABLE\n"
+                f"AI_ENABLED\n"
                 f"<b>Admin :</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             )
         else:
             update.effective_message.edit_text(
-                "{} ᴄʜᴀᴛʙᴏᴛ ᴇɴᴀʙʟᴇᴅ ʙʏ {}.".format(
+                "{} chatbot enabled by {}.".format(
                     dispatcher.bot.first_name, mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -87,17 +85,16 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
     return ""
 
 
-          
 @user_admin
 @gloggable
 def fallen(update: Update, context: CallbackContext):
     message = update.effective_message
-    msg = "• ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ᴛᴏ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ"
+    msg = "• Choose an option to enable/disable chatbot"
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="ᴇɴᴀʙʟᴇ", callback_data="add_chat({})"),
-                InlineKeyboardButton(text="ᴅɪsᴀʙʟᴇ", callback_data="rm_chat({})"),
+                InlineKeyboardButton(text="Enable", callback_data="add_chat({})"),
+                InlineKeyboardButton(text="Disable", callback_data="rm_chat({})"),
             ],
         ]
     )
@@ -142,17 +139,15 @@ def chatbot(update: Update, context: CallbackContext):
 
 
 __help__ = f"""
-*{BOT_NAME} ʜᴀs ᴀɴ ᴄʜᴀᴛʙᴏᴛ ᴡʜɪᴄʜ ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ᴀ sᴇᴇᴍɪɴɢʟᴇss ᴄʜᴀᴛᴛɪɴɢ ᴇxᴘᴇʀɪᴇɴᴄᴇ :**
+*{BOT_NAME} has a chatbot which provides you a seamless chatting experience:*
 
- »  /ᴄʜᴀᴛʙᴏᴛ *:* sʜᴏᴡs ᴄʜᴀᴛʙᴏᴛ ᴄᴏɴᴛʀᴏʟ ᴘᴀɴᴇʟ
-
-                                      
+ • `/chatbot` : Shows chatbot control panel
 """
 
-__mod_name__ = "Cʜᴀᴛʙᴏᴛ"
+__mod_name__ = "Chatbot"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", fallen, run_async=True)
+CHATBOT_HANDLER = CommandHandler("chatbot", fallen, run_async=True)
 ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat", run_async=True)
 RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat", run_async=True)
 CHATBOT_HANDLER = MessageHandler(
@@ -163,13 +158,13 @@ CHATBOT_HANDLER = MessageHandler(
 )
 
 dispatcher.add_handler(ADD_CHAT_HANDLER)
-dispatcher.add_handler(CHATBOTK_HANDLER)
+dispatcher.add_handler(CHATBOT_HANDLER)
 dispatcher.add_handler(RM_CHAT_HANDLER)
 dispatcher.add_handler(CHATBOT_HANDLER)
 
 __handlers__ = [
     ADD_CHAT_HANDLER,
-    CHATBOTK_HANDLER,
+    CHATBOT_HANDLER,
     RM_CHAT_HANDLER,
     CHATBOT_HANDLER,
 ]
