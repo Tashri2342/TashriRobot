@@ -147,14 +147,13 @@ __help__ = f"""
 __mod_name__ = "Chatbot"
 
 
-CHATBOT_HANDLER = CommandHandler("chatbot", fallen, run_async=True)
-ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat", run_async=True)
-RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat", run_async=True)
+CHATBOT_HANDLER = CommandHandler("chatbot", fallen,)
+ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat",)
+RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat",)
 CHATBOT_HANDLER = MessageHandler(
     Filters.text
     & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!") & ~Filters.regex(r"^\/")),
     chatbot,
-    run_async=True,
 )
 
 dispatcher.add_handler(ADD_CHAT_HANDLER)
