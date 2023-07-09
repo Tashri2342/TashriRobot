@@ -111,7 +111,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="♥️ѕυρєя ¢σммαη∂ѕ♥️", callback_data="help_back"),
-        InlineKeyboardButton(text="♥️∂σηαтιση♥️", callback_data="/donate"),
+        InlineKeyboardButton(text="♥️∂σηαтιση♥️", callback_data="donate"),
     ],
     [
         InlineKeyboardButton(text="♥¢нαттιηg♥", url=f"https://t.me/{SUPPORT_CHAT}"),
