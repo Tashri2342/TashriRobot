@@ -111,7 +111,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="♥️ѕυρєя ¢σммαη∂ѕ♥️", callback_data="help_back"),
-        InlineKeyboardButton(text="♥️∂σηαтιση♥️", callback_data="donate"),
+        InlineKeyboardButton(text="♥️∂σηαтιση♥️", url=f"https://te.legra.ph/Donation-07-09")
     ],
     [
         InlineKeyboardButton(text="♥¢нαттιηg♥", url=f"https://t.me/{SUPPORT_CHAT}"),
@@ -125,11 +125,25 @@ buttons = [
 HELP_STRINGS = f"""
 » {BOT_NAME}  ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴘᴇᴄɪғɪᴄs ᴄᴏᴍᴍᴀɴᴅ"""
 
-DONATE_STRING = """ʜᴇʏ ʙᴀʙʏ,
-  ʜᴀᴩᴩʏ ᴛᴏ ʜᴇᴀʀ ᴛʜᴀᴛ ʏᴏᴜ ᴡᴀɴɴᴀ ᴅᴏɴᴀᴛᴇ.
+DONATE_STRING = """
+🌟 **Thank you for considering a donation!** 🌟
 
-ʏᴏᴜ ᴄᴀɴ ᴅɪʀᴇᴄᴛʟʏ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [ᴅᴇᴠᴇʟᴏᴩᴇʀ](f"tg://user?id={OWNER_ID}") ғᴏʀ ᴅᴏɴᴀᴛɪɴɢ ᴏʀ ʏᴏᴜ ᴄᴀɴ ᴠɪsɪᴛ ᴍʏ [sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ](f"https://t.me/{SUPPORT_CHAT}") ᴀɴᴅ ᴀsᴋ ᴛʜᴇʀᴇ ᴀʙᴏᴜᴛ ᴅᴏɴᴀᴛɪᴏɴ."""
+🎗 Your support means a lot to us and helps us continue our work. Together, we can make a difference! 🤝
 
+🌈 You can contribute in the following ways:
+
+1️⃣ **Contact Us:** Feel free to reach out to our dedicated team for more information or assistance. We're here to help! ✉️
+
+   - Support Group: @TeamTashri
+   - Channel: @TashriBots2342
+   - UPI ID: tashri2342@ybl
+
+2️⃣ **Direct Donation:** You can directly contribute by clicking the button below[:](https://te.legra.ph/Donation-07-09)
+
+[♥️∂σηαтιση♥️](https://te.legra.ph/Donation-07-09)
+
+🙏 Your generous support will make a positive impact and help us create better bots. We are immensely grateful for your kindness and generosity. 😊❤️
+"""
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
