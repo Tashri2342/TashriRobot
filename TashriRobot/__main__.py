@@ -123,9 +123,10 @@ buttons = [
 ]
 
 HELP_STRINGS = f"""
-» {BOT_NAME}  ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴘᴇᴄɪғɪᴄs ᴄᴏᴍᴍᴀɴᴅ"""
+» {BOT_NAME}  ♥️¢ℓι¢к♥️ [.](https://te.legra.ph/file/39ec1dc49919a6912a1e7.jpg)  αηу вυттση♦️ вєℓσω тσ gєт кησωℓα∂gє♥️ ᴀʙᴏᴜᴛ🧸 ѕυρєя 🔰¢σммαη∂"""
 
-DONATE_STRING = """
+DONATE_STRING = f"""
+[.](https://te.legra.ph/Donation-07-09)
 🌟 **Thank you for considering a donation!** 🌟
 
 🎗 Your support means a lot to us and helps us continue our work. Together, we can make a difference! 🤝
