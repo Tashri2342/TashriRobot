@@ -95,12 +95,6 @@ PM_START_TEXT = """
 💐𝐅𝐞𝐞𝐥 😍 𝐋𝐚𝐠 📍 𝐅𝐫𝐞𝐞 😇 𝐓𝐨 🕊️ 𝐀𝐝𝐝 𝐌𝐞 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 🤖 𝐀𝐧𝐝 🩸 𝐄𝐧𝐣𝐨𝐲 ❥︎ 𝐒𝐮𝐩𝐞𝐫 💥 𝐇𝐢𝐠𝐡 💫 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 ⚡ 𝐌𝐚𝐧𝐚𝐠𝐢𝐧𝐠-𝐆𝐫𝐨𝐮𝐩 &   𝐏𝐥𝐚𝐲 🦞 𝐀𝐮𝐝𝐢𝐨 🎧 𝐀𝐧𝐝 🔊 𝐕𝐢𝐝𝐞𝐨 🌷
 
 ☆...................τɦє νเρ Βσყ..................☆ 
-		   
-																																																																																			  
-
-											   
-
-											  
 """
 
 buttons = [
@@ -110,9 +104,6 @@ buttons = [
             url=f"https://t.me/{dispatcher.bot.username}?startgroup=true",
         ),
     ],
-  
-																									   
-   
     [
         InlineKeyboardButton(text="🌼𝐇𝐄𝐋𝐏🌼", callback_data="help_back"),
         InlineKeyboardButton(text="🍷𝐌𝐔𝐒𝐈𝐂🍷", callback_data="Music_"),
@@ -122,7 +113,7 @@ buttons = [
         InlineKeyboardButton(text="🏡𝐎𝐅𝐅𝐈𝐂𝐄🏡", url=f"https://t.me/VIP_CREATORS"),
     ],
     [
-        InlineKeyboardButton(text="🌱𝐒𝐎𝐔𝐑𝐂𝐄🌱", callback_data="tashri_"),
+        InlineKeyboardButton(text="🌱𝐒𝐎𝐔𝐑𝐂𝐄🌱", callback_data="Tashri_"),
     ],
 ]
 
@@ -396,17 +387,12 @@ def help_button(update, context):
 @run_async
 def Tashri_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "tashri_":
+    if query.data == "Tashri_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
             text=f"*ʜᴇʏ,*🥀\n  *ᴛʜɪs ɪs {dispatcher.bot.first_name}*"
             "\n\n*ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ & ᴍᴜsɪᴄ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.*"
             "\n*ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ sǫʟᴀʟᴄʜᴇᴍʏ ᴀɴᴅ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ.*"
-									   
-													
-													  
-														
-										   
             "\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
             "\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ."
             "\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ."
@@ -427,20 +413,12 @@ def Tashri_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-											 
-																								 
-						  
-											 
-																								  
-						  
-	  
-	  
-                        InlineKeyboardButton(text="✯ вαϲк ✯", callback_data="tashri_back"),
+                        InlineKeyboardButton(text="✯ вαϲк ✯", callback_data="Tashri_back"),
                     ],
                 ]
             ),
         )
-    elif query.data == "tashri_back":
+    elif query.data == "Tashri_back":
         first_name = update.effective_user.first_name 
         query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
@@ -523,7 +501,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
                 ),
             ],
                     [
-                        InlineKeyboardButton(text="✯ вαϲк ✯", callback_data="tashri_back"),
+                        InlineKeyboardButton(text="✯ вαϲк ✯", callback_data="Tashri_back"),
                     ],
                 ]
            ),
@@ -1160,7 +1138,7 @@ def main():
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
     about_callback_handler = CallbackQueryHandler(
-        Tashri_about_callback, pattern=r"tashri_"
+        Tashri_about_callback, pattern=r"Tashri_"
     )
     Music_callback_handler = CallbackQueryHandler(
         Music_about_callback, pattern=r"Music_"
