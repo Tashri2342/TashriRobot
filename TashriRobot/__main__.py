@@ -431,15 +431,23 @@ def Tashri_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="📍𝐎𝐖𝐍𝐄𝐑📍", url=f"https://t.me/THE_VIP_BOY"
+                            text="🥀ᴅᴇᴠᴇʟᴏᴩᴇʀ🥀", url=f"https://t.me/Tashri2342"
                         ),
                         InlineKeyboardButton(
-                            text="🎄𝐑𝐄𝐏𝐎🎄", 
-                            url="https://github.com/THE-VIP-BOY-OP/VIP-ROBOT",
+                            text="✨𝐑𝐄𝐏𝐎✨", 
+                            url="https://github.com/Tashri2342/TashriRobot",
                         ),
                     ],
+					[
+                        InlineKeyboardButton(
+                            text="🚩sᴜᴩᴩᴏʀᴛ🚩", url=f"https://t.me/{SUPPORT_CHAT}"
+                        ),
+                        InlineKeyboardButton(
+                            text="💗ᴜᴩᴅᴀᴛᴇs💓", url=f"https://t.me/Tashribots2342"
+                        ),
+					],
                     [
-                        InlineKeyboardButton(text="✯ вαϲк ✯", callback_data="Tashri_back"),
+                        InlineKeyboardButton(text="♥️ вαϲк ♥️", callback_data="Tashri_back"),
                     ],
                 ]
             ),
