@@ -1052,7 +1052,7 @@ def get_settings(update: Update, context: CallbackContext):
     else:
         send_settings(chat.id, user.id, True)
 
-
+DONATION_LINK = "https://te.legra.ph/file/39ec1dc49919a6912a1e7.jpg"
 @run_async
 def donate(update: Update, context: CallbackContext):
     user = update.effective_message.from_user
