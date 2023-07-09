@@ -19,7 +19,7 @@ from telegram.ext import (
     CommandHandler,
     Filters,
     MessageHandler,
-    run_async,
+              
 )
 from telegram.utils.helpers import mention_html
 
@@ -29,7 +29,7 @@ from TashriRobot.modules.helper_funcs.chat_status import user_admin, user_admin_
 from TashriRobot.modules.log_channel import gloggable
 
 
-@run_async
+          
 @user_admin_no_reply
 @gloggable
 def fallenrm(update: Update, context: CallbackContext) -> str:
@@ -58,7 +58,7 @@ def fallenrm(update: Update, context: CallbackContext) -> str:
     return ""
 
 
-@run_async
+          
 @user_admin_no_reply
 @gloggable
 def fallenadd(update: Update, context: CallbackContext) -> str:
@@ -87,7 +87,7 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
     return ""
 
 
-@run_async
+          
 @user_admin
 @gloggable
 def fallen(update: Update, context: CallbackContext):
@@ -96,8 +96,8 @@ def fallen(update: Update, context: CallbackContext):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="📍ᴇɴᴀʙʟᴇ📍", callback_data="add_chat({})"),
-                InlineKeyboardButton(text="📍ᴅɪsᴀʙʟᴇ📍", callback_data="rm_chat({})"),
+                InlineKeyboardButton(text="ᴇɴᴀʙʟᴇ", callback_data="add_chat({})"),
+                InlineKeyboardButton(text="ᴅɪsᴀʙʟᴇ", callback_data="rm_chat({})"),
             ],
         ]
     )
@@ -133,31 +133,33 @@ def chatbot(update: Update, context: CallbackContext):
         if not fallen_message(context, message):
             return
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://api.safone.me/chatbot?query={message.text}&user_id={chat_id}&bot_name=Group_Controller&bot_master=Mukesh"
-        request = requests.get(url)
+        request = requests.get(
+            f"https://api.safone.me/chatbot?query={message.text}&user_id={chat_id}&bot_name=Group_Controller&bot_master=Mukesh"
+        )
         results = json.loads(request.text)
         sleep(0.5)
-        message.reply_text(results["reply"])
+        message.reply_text(results["response"])
 
 
 __help__ = f"""
-*{BOT_NAME} ʜᴀs ᴀɴ ᴄʜᴀᴛʙᴏᴛ ᴡʜɪᴄʜ  ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ᴀ sᴇᴇᴍɪɴɢʟᴇss ᴄʜᴀᴛᴛɪɴɢ ᴇxᴘᴇʀɪᴇɴᴄᴇ :*
+*{BOT_NAME} ʜᴀs ᴀɴ ᴄʜᴀᴛʙᴏᴛ ᴡʜɪᴄʜ ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ᴀ sᴇᴇᴍɪɴɢʟᴇss ᴄʜᴀᴛᴛɪɴɢ ᴇxᴘᴇʀɪᴇɴᴄᴇ :**
 
  »  /ᴄʜᴀᴛʙᴏᴛ *:* sʜᴏᴡs ᴄʜᴀᴛʙᴏᴛ ᴄᴏɴᴛʀᴏʟ ᴘᴀɴᴇʟ
 
-☆............𝙱𝚈 » [Tashri](https://t.me/Tashri2342)............☆
+                                      
 """
 
-__mod_name__ = "♨️Cʜᴀᴛʙᴏᴛ♨️"
+__mod_name__ = "Cʜᴀᴛʙᴏᴛ"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", fallen)
-ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat")
-RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat")
+CHATBOTK_HANDLER = CommandHandler("chatbot", fallen, run_async=True)
+ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat", run_async=True)
+RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat", run_async=True)
 CHATBOT_HANDLER = MessageHandler(
     Filters.text
     & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!") & ~Filters.regex(r"^\/")),
     chatbot,
+    run_async=True,
 )
 
 dispatcher.add_handler(ADD_CHAT_HANDLER)
