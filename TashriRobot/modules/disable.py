@@ -352,7 +352,7 @@ if is_module_loaded(FILENAME):
 ☆............𝙱𝚈 » [Tashri](https://t.me/Tashri2342)............☆
     """
 
-    __mod_name__ = " ♨️Dɪsᴀʙʟᴇ♨️"
+    __mod_name__ = "♨️Dɪsᴀʙʟᴇ♨️"
 
 else:
     DisableAbleCommandHandler = CommandHandler
