@@ -250,18 +250,18 @@ def start(update: Update, context: CallbackContext):
             first_name = update.effective_user.first_name
             
             x=update.effective_message.reply_sticker(
-                "CAACAgUAAxkBAAI33mLYLNLilbRI-sKAAob0P7koTEJNAAIOBAACl42QVKnra4sdzC_uKQQ")
+                "CAACAgEAAxkBAAEJo4dkqlWJtE7chCtijj7CpCm1Ky7TugACVTMAAtpxZgdUSKRTBteYgS8E")
             x.delete()
             usr = update.effective_user
             lol = update.effective_message.reply_text(
                 PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠.")
+            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠😘")
             time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠..")
+            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠😘😘")
             time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠... ")
+            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠😘😘😘 ")
             time.sleep(0.4)
             lol.delete()
             
