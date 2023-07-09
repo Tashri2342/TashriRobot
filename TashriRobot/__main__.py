@@ -96,7 +96,7 @@ PM_START_TEXT = """
 
 ╚═════۩۞Tashri۞۩════╝
 
-☆..♥️.....♥️❦Radhe Radhe!࿐☆♥️.​​​​​​​​​​....♥️..☆
+☆..♥️...♥️❦Radhe Radhe!࿐☆♥️​​​​​​​​​​...♥️..☆
 """
 
 buttons = [
@@ -242,11 +242,11 @@ def start(update: Update, context: CallbackContext):
                 PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠.")
+            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠😘")
             time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠..")
+            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠😘😘")
             time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠... ")
+            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠😘😘😘 ")
             time.sleep(0.4)
             lol.delete()
             
