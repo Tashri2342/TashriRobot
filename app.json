@@ -1,7 +1,7 @@
 {
       "name": "TashriBots",
       "description": "Tashri Group Robot",
-      "logo": "https://graph.org/file/d874fc40ddf9ead0cad6b.jpg",
+      "logo": "https://te.legra.ph/file/48e7bc019fa24d81925d2.jpg",
       "keywords": [
          "telegram",
          "modular",
@@ -60,7 +60,7 @@
       "START_IMG": {
          "description": "Telegraph link of the image which will be shown at start command.",
          "required": true,
-         "value": "https://graph.org/file/d874fc40ddf9ead0cad6b.jpg"
+         "value": "https://te.legra.ph/file/48e7bc019fa24d81925d2.jpg"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit.",
@@ -71,6 +71,12 @@
          "description": "Get bot token from @BotFather on TG",
          "required": true,
          "value": ""
+      },
+      "DONATION_LINK": {
+         "description": "Give Your Donation link of QR Code",
+         "required": true,
+         "value": "https://te.legra.ph/Donation-07-09"
+
       }
    }
 }
