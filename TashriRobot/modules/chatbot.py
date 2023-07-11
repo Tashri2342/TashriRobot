@@ -131,7 +131,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         bot.send_chat_action(chat_id, action="typing")
         request = requests.get(
-            f"https://fallenxbot.vercel.app/api/apikey=6126200262-fallen-wfzo44ozfw/fallen/Anonymous/message=hehe"
+            f"https://api.safone.me/chatbot?query={message.text}&user_id={chat_id}&bot_name=Group_Controller&bot_master=Mukesh"
         )
         results = json.loads(request.text)
         sleep(0.5)
