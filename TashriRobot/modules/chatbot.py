@@ -126,10 +126,21 @@ def chatbot(update: Update, context: CallbackContext):
     if is_fallen:
         return
 
-    if message.text and not message.document:
+ if message.text and not message.document:
         if not fallen_message(context, message):
             return
         bot.send_chat_action(chat_id, action="typing")
+        if "Tera baap Kon" in text:
+            message.reply_text("Mera Baap @Tashri2342 hai")
+        elif "Who is you father?" in text:
+            message.reply_text("My father is @Tashri2342.")
+        elif "Prerna" in text:
+            message.reply_text("Hay Kis sunderi kaa naam le diya")
+        elif "Tashri" in text:
+            message.reply_text("He is my god. Mujha banna bala bahi hai")
+        elif "Radhe" in text:
+            message.reply_text("Radhe Radhe!")
+        else:
         request = requests.get(
             f"https://fallenxbot.vercel.app/api/apikey=6126200262-fallen-wfzo44ozfw/fallen/Anonymous/message={message.text}"
         )
@@ -139,7 +150,7 @@ def chatbot(update: Update, context: CallbackContext):
         if response:
             message.reply_text(response)
         else:
-            message.reply_text("I'm sorry, I couldn't generate a response.")
+            message.reply_text("I'm sorry, Mere baap @Tashri2342 na ya sab nhi sikhaya h moko.")
 
 
 __help__ = f"""
