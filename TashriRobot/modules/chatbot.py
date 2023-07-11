@@ -1,7 +1,7 @@
 import html
 import json
 import re
-from typing import Optional
+                           
 from time import sleep
 
 import requests
@@ -20,6 +20,7 @@ from telegram.ext import (
     CommandHandler,
     Filters,
     MessageHandler,
+	 
 )
 from telegram.utils.helpers import mention_html
 
@@ -29,6 +30,7 @@ from TashriRobot.modules.helper_funcs.chat_status import user_admin, user_admin_
 from TashriRobot.modules.log_channel import gloggable
 
 
+	
 @user_admin_no_reply
 @gloggable
 def fallenrm(update: Update, context: CallbackContext) -> str:
@@ -48,7 +50,7 @@ def fallenrm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "{} chatbot disabled by {}.".format(
+                "{} ᴄʜᴀᴛʙᴏᴛ ᴅɪsᴀʙʟᴇᴅ ʙʏ {}.".format(
                     dispatcher.bot.first_name, mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -57,6 +59,7 @@ def fallenrm(update: Update, context: CallbackContext) -> str:
     return ""
 
 
+	
 @user_admin_no_reply
 @gloggable
 def fallenadd(update: Update, context: CallbackContext) -> str:
@@ -71,12 +74,12 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
             is_fallen = sql.rem_fallen(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
-                f"AI_ENABLED\n"
+                f"AI_ENABLE\n"
                 f"<b>Admin :</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             )
         else:
             update.effective_message.edit_text(
-                "{} chatbot enabled by {}.".format(
+                "{} ᴄʜᴀᴛʙᴏᴛ ᴇɴᴀʙʟᴇᴅ ʙʏ {}.".format(
                     dispatcher.bot.first_name, mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -85,16 +88,17 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
     return ""
 
 
+	
 @user_admin
 @gloggable
 def fallen(update: Update, context: CallbackContext):
     message = update.effective_message
-    msg = "• Choose an option to enable/disable chatbot"
+    msg = "• ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ᴛᴏ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ"
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Enable", callback_data="add_chat({})"),
-                InlineKeyboardButton(text="Disable", callback_data="rm_chat({})"),
+                InlineKeyboardButton(text="📍ᴇɴᴀʙʟᴇ📍", callback_data="add_chat({})"),
+                InlineKeyboardButton(text="📍ᴅɪsᴀʙʟᴇ📍", callback_data="rm_chat({})"),
             ],
         ]
     )
@@ -126,10 +130,11 @@ def chatbot(update: Update, context: CallbackContext):
     if is_fallen:
         return
 
- if message.text and not message.document:
+    if message.text and not message.document:
         if not fallen_message(context, message):
             return
         bot.send_chat_action(chat_id, action="typing")
+        text = message.text.lower()
         if "Tera baap Kon" in text:
             message.reply_text("Mera Baap @Tashri2342 hai")
         elif "Who is you father?" in text:
@@ -141,44 +146,47 @@ def chatbot(update: Update, context: CallbackContext):
         elif "Radhe" in text:
             message.reply_text("Radhe Radhe!")
         else:
-        request = requests.get(
-            f"https://fallenxbot.vercel.app/api/apikey=6126200262-fallen-wfzo44ozfw/fallen/Anonymous/message={message.text}"
-        )
-        results = json.loads(request.text)
-        sleep(0.5)
-        response = results.get("reply")
-        if response:
-            message.reply_text(response)
-        else:
-            message.reply_text("I'm sorry, Mere baap @Tashri2342 na ya sab nhi sikhaya h moko.")
+            request = requests.get(
+                f"https://fallenxbot.vercel.app/api/apikey=6126200262-fallen-wfzo44ozfw/fallen/Anonymous/message={message.text}"
+            )
+            results = json.loads(request.text)
+            sleep(0.5)
+            response = results.get("reply")
+            if response:
+                message.reply_text(response)
+            else:
+                message.reply_text("I'm sorry, Mere baap @Tashri2342 na ya sab nhi sikhaya h moko.")
 
 
 __help__ = f"""
-*{BOT_NAME} has a chatbot which provides you a seamless chatting experience:*
+*{BOT_NAME} ʜᴀs ᴀɴ ᴄʜᴀᴛʙᴏᴛ ᴡʜɪᴄʜ ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ᴀ sᴇᴇᴍɪɴɢʟᴇss ᴄʜᴀᴛᴛɪɴɢ ᴇxᴘᴇʀɪᴇɴᴄᴇ :*
 
- • `/chatbot` : Shows chatbot control panel
+»  /chatbot *:* sʜᴏᴡs ᴄʜᴀᴛʙᴏᴛ ᴄᴏɴᴛʀᴏʟ ᴘᴀɴᴇʟ
+
+☆............𝙱𝚈 » [Tashri](https://t.me/Tashri2342)............☆
 """
 
-__mod_name__ = "Chatbot"
+__mod_name__ = "♨️Cʜᴀᴛʙᴏᴛ♨️"
 
 
-CHATBOT_HANDLER = CommandHandler("chatbot", fallen,)
-ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat",)
-RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat",)
+CHATBOTK_HANDLER = CommandHandler("chatbot", fallen, run_async=True)
+ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat", run_async=True)
+RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat", run_async=True)
 CHATBOT_HANDLER = MessageHandler(
     Filters.text
     & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!") & ~Filters.regex(r"^\/")),
     chatbot,
+    run_async=True,
 )
 
 dispatcher.add_handler(ADD_CHAT_HANDLER)
-dispatcher.add_handler(CHATBOT_HANDLER)
+dispatcher.add_handler(CHATBOTK_HANDLER)
 dispatcher.add_handler(RM_CHAT_HANDLER)
 dispatcher.add_handler(CHATBOT_HANDLER)
 
 __handlers__ = [
     ADD_CHAT_HANDLER,
-    CHATBOT_HANDLER,
+    CHATBOTK_HANDLER,
     RM_CHAT_HANDLER,
     CHATBOT_HANDLER,
 ]
