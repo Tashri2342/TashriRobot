@@ -1,7 +1,7 @@
 import html
 import json
 import re
-                           
+from typing import Optional
 from time import sleep
 
 import requests
@@ -20,7 +20,7 @@ from telegram.ext import (
     CommandHandler,
     Filters,
     MessageHandler,
-	 
+  
 )
 from telegram.utils.helpers import mention_html
 
@@ -30,7 +30,7 @@ from TashriRobot.modules.helper_funcs.chat_status import user_admin, user_admin_
 from TashriRobot.modules.log_channel import gloggable
 
 
-	
+ 
 @user_admin_no_reply
 @gloggable
 def fallenrm(update: Update, context: CallbackContext) -> str:
@@ -59,7 +59,7 @@ def fallenrm(update: Update, context: CallbackContext) -> str:
     return ""
 
 
-	
+ 
 @user_admin_no_reply
 @gloggable
 def fallenadd(update: Update, context: CallbackContext) -> str:
@@ -88,7 +88,7 @@ def fallenadd(update: Update, context: CallbackContext) -> str:
     return ""
 
 
-	
+ 
 @user_admin
 @gloggable
 def fallen(update: Update, context: CallbackContext):
@@ -169,14 +169,14 @@ __help__ = f"""
 __mod_name__ = "♨️Cʜᴀᴛʙᴏᴛ♨️"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", fallen, run_async=True)
-ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat", run_async=True)
-RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat", run_async=True)
+CHATBOTK_HANDLER = CommandHandler("chatbot", fallen,)
+ADD_CHAT_HANDLER = CallbackQueryHandler(fallenadd, pattern=r"add_chat",)
+RM_CHAT_HANDLER = CallbackQueryHandler(fallenrm, pattern=r"rm_chat",)
 CHATBOT_HANDLER = MessageHandler(
     Filters.text
     & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!") & ~Filters.regex(r"^\/")),
     chatbot,
-    run_async=True,
+				   
 )
 
 dispatcher.add_handler(ADD_CHAT_HANDLER)
