@@ -116,7 +116,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="♥¢нαттιηg♥", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="♥️му σƒƒιcє♥️", url=f"https://t.me/VIP_CREATORS"),
+        InlineKeyboardButton(text="♥️му σƒƒιcє♥️", url=f"https://t.me/DurlabhBots"),
     ],
     [
         InlineKeyboardButton(text="♥️𝙎𝙪𝙥𝙚𝙧🔸𝙎𝙤𝙪𝙧𝙘𝙚♥️", callback_data="Tashri_"),
