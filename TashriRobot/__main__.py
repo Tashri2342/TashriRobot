@@ -82,7 +82,7 @@ PM_START_TEXT = """
 
 ╔═══❰🌺𝐖𝐄𝐋𝐂𝐎𝐌𝐄🌺❱════❍⊱❁۪۪
 ║
-║┣⪼♨️𝗠𝗔𝗗𝗘 𝗕𝗬 𝗧𝗮𝘀𝗵𝗿𝗶♨️
+║┣⪼♨️MADE BY DURLABH KASHYAP♨️
 ║
 ╚═══❰★@OfficialDurlabhKashyap★❱══❍⊱❁۪۪
 
