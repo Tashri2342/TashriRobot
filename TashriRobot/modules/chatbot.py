@@ -147,7 +147,7 @@ def chatbot(update: Update, context: CallbackContext):
             message.reply_text("Radhe Radhe!")
         else:
             request = requests.get(
-                f"https://fallenxbot.vercel.app/api/apikey=6126200262-fallen-wfzo44ozfw/fallen/Anonymous/message={message.text}"
+                f"https://fallenxbot.vercel.app/api/apikey=6126200262-fallen-abht44thba/fallen/Anonymous/message={message.text}"
             )
             results = json.loads(request.text)
             sleep(0.5)
