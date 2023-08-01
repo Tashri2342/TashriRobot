@@ -137,7 +137,7 @@ DONATE_STRING = f"""
 1️⃣ **Contact Us:** Feel free to reach out to our dedicated team for more information or assistance. We're here to help! ✉️
 
    - Support Group: @TashriChatting
-   - Channel: @TashriBots2342
+   - Channel: @TashriBots
    - UPI ID: tashri2342@ybl
 
 2️⃣ **Direct Donation:** You can directly contribute by clicking the button below[:](https://te.legra.ph/Donation-07-09)
@@ -444,7 +444,7 @@ def Tashri_about_callback(update: Update, context: CallbackContext):
                             text="🚩sᴜᴩᴩᴏʀᴛ🚩", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="💗ᴜᴩᴅᴀᴛᴇs💓", url=f"https://t.me/Tashribots2342"
+                            text="💗ᴜᴩᴅᴀᴛᴇs💓", url=f"https://t.me/Tashribots"
                         ),
 					],
                     [
