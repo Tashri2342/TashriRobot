@@ -116,7 +116,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="♥¢нαттιηg♥", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="♥️му σƒƒιcє♥️", url=f"https://t.me/DurlabhBots"),
+        InlineKeyboardButton(text="♥️му σƒƒιcє♥️", url=f"https://t.me/TashriBots"),
     ],
     [
         InlineKeyboardButton(text="♥️𝙎𝙪𝙥𝙚𝙧🔸𝙎𝙤𝙪𝙧𝙘𝙚♥️", callback_data="Tashri_"),
@@ -136,7 +136,7 @@ DONATE_STRING = f"""
 
 1️⃣ **Contact Us:** Feel free to reach out to our dedicated team for more information or assistance. We're here to help! ✉️
 
-   - Support Group: @TeamTashri
+   - Support Group: @TashriChatting
    - Channel: @TashriBots2342
    - UPI ID: tashri2342@ybl
 
