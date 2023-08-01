@@ -340,7 +340,7 @@ def info(update: Update, context: CallbackContext):
                                 "ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Tashri2342"
                             ),
                             InlineKeyboardButton(
-                                "Dɪsᴀsᴛᴇʀ", url="https://t.me/TeamTashri"
+                                "Dɪsᴀsᴛᴇʀ", url="https://t.me/TashriChatting"
                             ),
                         ],
                         [
